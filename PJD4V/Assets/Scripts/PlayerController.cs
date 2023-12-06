@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.InputSystem;
 
-public class PlayerController : MonoBehaviour, IDamageable
+public class PlayerController : MonoBehaviour
 {
     public int bulletDamage;
 
@@ -439,7 +439,7 @@ public class PlayerController : MonoBehaviour, IDamageable
         _onKnockback = true;
     }
 
-    public void TakeEnergy(int damage)
+    public void TakeDamage(int damage)
     {
         if (_active && _lastImmuneTime + immuneTime< Time.time)
         {
